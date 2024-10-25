@@ -1,0 +1,118 @@
+:root {
+  --color: #add8e6;
+  --background-color: #808080;
+  --shadow: #e6e6fa;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.2rem;
+  background-color: var(--background-color);
+}
+.page.active {
+  display: block;
+}
+.page {
+  /* min-height: 4000px; */
+}
+/* Undangan */
+
+.main-container {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  background-image: url(image/img.v2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  min-height: 100vh;
+}
+h4,
+h1,
+h2 {
+  color: var(--color);
+  text-shadow: var(--shadow);
+}
+#page1 h4 {
+  font-family: "Playfair", serif;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+#page1 h1 {
+  font-family: "Dancing Script", serif;
+}
+.btn {
+  background-color: var(--shadow);
+  height: 50px;
+}
+
+/* Akhir Undangan */
+
+/* Isi Undangan */
+
+/* Navbar */
+.myNavbar .navbarbrand,
+.myNavbar .offcanvas-title {
+  font-family: "Playfair", serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.myNavbar .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* Akhir Navbar */
+/* home */
+
+/* akhir home */
+
+/* Akhir Undangan */
+
+/* Responsive */
+/* Gaya untuk perangkat kecil (smartphone) */
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .main-container {
+    padding: 20px;
+  }
+}
+
+/* Gaya untuk perangkat sedang (tablet) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+  }
+  .myNavbar .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .main-container {
+    padding: 30px;
+  }
+}
+
+/* Gaya untuk perangkat besar (desktop) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .main-container {
+    padding: 40px;
+  }
+}
+/* Akhir Responsive */
