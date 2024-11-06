@@ -18,21 +18,19 @@ body {
 .page.active {
   display: block;
 }
-.page {
-  min-height: 4000px;
-}
-/* Undangan */
 
+/* Undangan */
+.opencontainer {
+  background-image: url(image/img.v2.jpg);
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .main-container {
   text-align: center;
   justify-content: center;
   width: 100%;
-  overflow: hidden;
-  background-image: url(image/img.v2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
   min-height: 100vh;
 }
 h4,
@@ -56,15 +54,38 @@ h2 {
 }
 
 /* Akhir Undangan */
+/* Snow */
+.snow-container {
+  position: fixed; /* Mengisi seluruh halaman */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Mengisi konten */
+  pointer-events: none; /* Tidak mengganggu interaksi */
+}
+
+.snow {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+/* Akhir Snow */
 
 /* Isi Undangan */
 
 /* Navbar */
+#page2 {
+  min-height: 5000px;
+  display: none;
+}
 .myNavbar .navbarbrand,
 .myNavbar .offcanvas-title {
   font-family: "Playfair", serif;
   font-size: 3rem;
   font-weight: bold;
+  z-index: 100;
 }
 .myNavbar .nav-link {
   font-size: 1rem;
@@ -72,27 +93,180 @@ h2 {
 }
 /* Akhir Navbar */
 /* home */
+.homeContainer {
+  padding: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  min-height: 100vh;
+  background-image: url(image/wp2892680.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.homeinfo h1 {
+  font-family: "Dancing Script", serif;
+  justify-content: start;
+  color: #00bfff;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.homeinfo h2 {
+  font-family: "Playfair", serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+/* Location */
+
+.loc-container,
+.time-container h4 {
+  font-family: "Dancing Script", serif;
+}
+
+.loc .loc-btn {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  justify-content: center; /* Memastikan konten di tengah */
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Memanfaatkan lebar penuh */
+  display: flex;
+  margin: 0 auto; /* Memastikan tombol berada di tengah */
+  padding: 10px 20px; /* Tambahkan padding jika perlu */
+}
+/* Akhir Location */
+
+/* Time */
+.time.time-container {
+  padding: 2rem;
+  width: 100%;
+}
+
+.time-container.time .time-container {
+  display: flex; /* Menggunakan flexbox untuk memusatkan konten */
+  flex-direction: column; /* Susun elemen secara vertikal */
+  justify-content: center; /* Memusatkan konten secara vertikal */
+  align-items: center; /* Memusatkan konten secara horizontal */
+  width: 100%;
+}
+.time.time-container h4 {
+  font-family: "Dancing Script", serif;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.time-container iframe {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Akhir Time */
+.loc-container,
+.time-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 5px; /* Memberi ruang di dalam kotak */
+  border: 2px solid #add8e6; /* Warna border sesuai variabel */
+  border-radius: 10px; /* Membuat sudut membulat */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Menambah bayangan */
+  margin: 20px auto; /* Jarak antar elemen di atas dan bawah */
+}
 
 /* akhir home */
-
+/* Story */
+.story {
+  padding-top: 40px;
+  margin: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+.story-container {
+  font-family: "Dancing Script", serif;
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.story-container h4 {
+  font-family: "Playfair", serif;
+}
+.bride-container,
+.broom-contaier {
+  margin: 20px;
+  padding: 6px;
+  font-family: "Playfair", serif;
+}
+.info {
+  padding-top: 50px;
+  margin: 20px;
+}
+.groom-container .groombtn {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: #00bfff;
+  border-radius: 10px;
+  font-variant: small-caps;
+  font-size: larger;
+  font-family: "Playfair", serif;
+  width: 6rem;
+  height: 3rem;
+  justify-content: center;
+  text-align: center;
+}
+.bride-container .bridebtn {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: #00bfff;
+  border-radius: 10px;
+  font-variant: small-caps;
+  font-size: larger;
+  font-family: "Playfair", serif;
+  width: 6rem;
+  height: 3rem;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+}
+/* Akhir Story */
 /* Akhir Undangan */
 
 /* Responsive */
 /* Gaya untuk perangkat kecil (smartphone) */
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   body {
-    font-size: 1rem;
+    font-size: 60%;
   }
 
   .main-container {
     padding: 20px;
   }
+  .time-container .simply-countdown > * {
+    font-size: 0.8rem; /* Lebih kecil untuk perangkat kecil */
+  }
+
+  .time-container .simply-countdown > * {
+    font-size: 1rem; /* Lebih kecil untuk perangkat kecil */
+    min-width: 50px; /* Menjaga lebar minimum untuk elemen countdown */
+  }
+  .time-container.simply-countdown > .simply-section {
+    padding: 10px;
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* Gaya untuk perangkat sedang (tablet) */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (max-width: 768px) {
   body {
-    font-size: 1.1rem;
+    font-size: 62.5%;
   }
   .myNavbar .nav-link {
     font-size: 1rem;
@@ -103,16 +277,36 @@ h2 {
   .main-container {
     padding: 30px;
   }
+  .simply-countdown > .simply-section {
+    padding: 30px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
 }
 
 /* Gaya untuk perangkat besar (desktop) */
-@media (min-width: 1025px) {
+@media (max-width: 992px) {
   body {
-    font-size: 1.2rem;
+    font-size: 75%;
   }
-
+  .simply-countdown > .simply-section {
+    width: 45px;
+    height: 45px;
+    padding: 35px;
+  }
   .main-container {
     padding: 40px;
   }
 }
 /* Akhir Responsive */
+/* Snow Efek */
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+/* Akhir Snow Effect */
